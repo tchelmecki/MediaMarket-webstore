@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,600;1,500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    color: black;
+}
+.header{
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+.title{
+    font-family: 'Saira', sans-serif;
+    color: rgb(227, 0, 0);
+    width: 20vw;
+    height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.title a{
+    color: rgb(227, 0, 0);
+    text-decoration: none;
+}
+.search-container {
+    position: relative;
+  }
+.search-input{
+    height: 50px;
+    width: 30vw;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding-left: 20px;
+}  
+.search-icon {
+    position: absolute;
+    top: 25%;
+    right: 2%;
+    transform: translateY(-20%);
+    pointer-events: none; 
+    font-size: 30px;
+    color: rgb(227, 0, 0);
+}
+.options{
+    height: 50px;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+.options-icon{
+    margin-right: 5px;
+    margin-left: 10px;
+    color: rgb(227, 0, 0);
+    font-size: 25px;
+}
+.options span:hover{
+    transition: .3s all ease-in-out;
+    color: rgb(227, 0, 0);
+    cursor: pointer;
+}
+.menu{
+    height: 70px;
+    width: 100vw;
+    border-bottom: 1px solid rgba(210, 210, 210, 0.406);
+    padding-left: 15%;
+    padding-right: 20%;
+}
+ul{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+}
+ul a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Saira', sans-serif;
+    font-weight: bold;
+    color: inherit;
+}
+ul li:first-child{
+    color: rgb(227, 0, 0);
+}
+ul li:not(:first-child){
+    position: relative;
+}
+
+.menu ul li:not(:first-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0; /* Szerokość początkowa linii - zerowa */
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease, transform 0.3s ease; /* Dodajemy transformację do animacji */
+    transform: translateX(-50%); /* Przesunięcie w lewo o połowę szerokości elementu */
+  }
+  
+  .menu ul li:not(:first-child):hover::after {
+    width: 100%; /* Po najechaniu myszką, szerokość linii zmienia się na pełną długość */
+    transform: translateX(0); /* Przywracamy transformację do wartości początkowej */
+  }
+ul li:hover{
+    transition: .3s ease-in-out all;
+    color: black;
+    cursor: pointer;
+}
+.menu ul li:first-child{
+    display: flex;
+    align-items: center;
+}
+.menu ul li:first-child .icon{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.products{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px 10px 30px ;
+    border: 3px solid red;
+}
