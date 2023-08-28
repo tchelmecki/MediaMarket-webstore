@@ -225,16 +225,20 @@ section{
 }
 /*left-content*/
 .left-content{
+    background-color: antiquewhite;
+    width: 15vw;
+}
+.left-bar{
     border: 1px solid #ddd;
     width: 15vw;
     height: 440px;
 }
-.left-content ul{
+.left-bar ul{
     display: flex;
     flex-direction: column;
     padding-left: 20px;
 }
-.left-content ul li a{
+.left-bar ul li a{
     display: flex;
     align-items: center;
     width: 100%;
@@ -244,8 +248,30 @@ section{
     font-weight: 100;
     text-align: left;
 }
-.left-content ul li a:hover{
+.left-bar ul li a:hover{
     color: rgb(227, 0, 0);
+}
+
+.price{
+    width: 15vw;
+    height: 150px;
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.input-range::-webkit-slider-thumb {
+    background-color: red; /* Dla przeglądarek opartych na WebKit (Chrome, Safari) */
+}
+
+.input-range::-moz-range-thumb {
+    background-color: red; /* Dla przeglądarek opartych na Gecko (Firefox) */
+}
+
+.input-range::-ms-thumb {
+    background-color: red; /* Dla przeglądarek opartych na Trident (Internet Explorer, Edge) */
 }
 /*right-content*/
 .right-content{
@@ -256,18 +282,23 @@ section{
 .dropdown-flex{
     display: flex;
     justify-content: left;
+    align-items: center;
     width: 100%;
+    /* background-color: antiquewhite; */
 }
 .dropdown{
     width: 17em;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
     font-weight: 100;
     margin-right: 2em;
+    position: relative;
+}
+.dropdown:nth-child(2) .menu-select {
+    /* Twoje style dla drugiego dropdowna */
+    height: 280px; /* lub inne style */
 }
 
 .select{
@@ -302,10 +333,6 @@ section{
 }
 
 .menu-select{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
@@ -315,11 +342,14 @@ section{
     transition: 0.2s;
     z-index: 1;
     opacity: 0;
+    
+    
 }
 
 .menu-select li{
     cursor: pointer;
     height: 40px;
+    
 }
 
 .menu-select li:hover{
@@ -332,9 +362,27 @@ section{
 .active{
     background: #efefef;
 }
+.active:last-child{
+    border-bottom: 1px solid black;
+}
 
 .menu-select-open{
     display: block;
     opacity: 1;
+    position: absolute;
+    top: 100%;
+    width: 100%;
 }
+
+.icon-change-layout1{
+    width: 40px;
+    font-size: 36px;
+}
+
+.icon-change-layout2{
+    width: 40px;
+    font-size: 22px;
+    color: #ddd;
+}
+
 
