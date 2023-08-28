@@ -4,42 +4,54 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     background-color: #fff;
     color: black;
 }
-.header{
+
+nav{
     height: 60px;
     width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 10px;
     flex-wrap: wrap;
+    position: sticky; /* Change to sticky */
+    top: 0; /* Stick it at the top */
+    background-color: white; /* Add a background color */
+    z-index: 1000; 
 }
+
 .title{
     font-family: 'Saira', sans-serif;
     color: rgb(227, 0, 0);
-    width: 20vw;
-    height: 50px;
+    width: 15vw;
+    height: 60px;
     font-size: 40px;
     font-weight: bold;
 }
+
 .title a{
     color: rgb(227, 0, 0);
     text-decoration: none;
 }
+
 .search-container {
     position: relative;
-  }
+}
+
 .search-input{
     height: 50px;
-    width: 30vw;
+    width: 35vw;
     border: 1px solid black;
     border-radius: 2px;
     padding-left: 20px;
 }  
+
 .search-icon {
     position: absolute;
     top: 25%;
@@ -49,6 +61,7 @@ body{
     font-size: 30px;
     color: rgb(227, 0, 0);
 }
+
 .options{
     height: 50px;
     width: 20vw;
@@ -59,6 +72,7 @@ body{
     font-weight: 600;
     font-size: 18px;
 }
+
 .options-icon{
     margin-right: 5px;
     margin-left: 10px;
@@ -70,12 +84,21 @@ body{
     color: rgb(227, 0, 0);
     cursor: pointer;
 }
+
+.options .products:hover{
+    transition: .3s all ease-in-out;
+    color: rgb(227, 0, 0);
+    cursor: pointer;
+}
 .menu{
     height: 70px;
-    width: 100vw;
     border-bottom: 1px solid rgba(210, 210, 210, 0.406);
     padding-left: 15%;
-    padding-right: 20%;
+    padding-right: 15%;
+    position: fixed;
+    top: 0;
+    position: relative;
+    z-index: 999; /
 }
 ul{
     height: 70px;
@@ -100,7 +123,7 @@ ul a{
     font-weight: bold;
     color: inherit;
 }
-ul li:first-child{
+ul .products:first-child{
     color: rgb(227, 0, 0);
 }
 ul li:not(:first-child){
@@ -110,35 +133,208 @@ ul li:not(:first-child){
 .menu ul li:not(:first-child)::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: 0px;
     width: 0; /* Szerokość początkowa linii - zerowa */
     height: 2px;
-    background-color: red;
+    background-color:  rgb(227, 0, 0);
     transition: width 0.3s ease, transform 0.3s ease; /* Dodajemy transformację do animacji */
     transform: translateX(-50%); /* Przesunięcie w lewo o połowę szerokości elementu */
-  }
+}
   
-  .menu ul li:not(:first-child):hover::after {
+.menu ul li:not(:first-child):hover::after {
     width: 100%; /* Po najechaniu myszką, szerokość linii zmienia się na pełną długość */
     transform: translateX(0); /* Przywracamy transformację do wartości początkowej */
-  }
-ul li:hover{
+}
+
+ul .products:hover{
     transition: .3s ease-in-out all;
     color: black;
     cursor: pointer;
 }
-.menu ul li:first-child{
+
+.menu ul.products:first-child{
     display: flex;
     align-items: center;
 }
+
 .menu ul li:first-child .icon{
     font-size: 25px;
     margin-right: 10px;
 }
+
 .products{
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px 30px 10px 30px ;
+    padding: 10px 30px 10px 30px;
     border: 3px solid red;
+    color: red;
+    font-family: 'Saira', sans-serif;
+    font-weight: bold;
+    color: inherit;
 }
+
+
+
+/*DROPDOWN MENU*/
+.menu ul ul{
+    
+}
+
+/*section*/
+section{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*before-content*/
+.before-content{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    width: 70vw;
+    background-color: white;
+    color: #949494;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.section-container{
+    width: 70vw;
+}
+.before-content a{
+    text-decoration: none;
+    color: black;
+}
+.before-content a:hover{
+    color: rgb(227, 0, 0);
+    text-decoration: underline;
+}
+.title-content{
+    width: 70vw;
+    font-family: 'Saira', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/*content*/
+.content{
+    display: flex;
+    justify-content: center;
+}
+/*left-content*/
+.left-content{
+    border: 1px solid #ddd;
+    width: 15vw;
+    height: 440px;
+}
+.left-content ul{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.left-content ul li a{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    text-align: left;
+}
+.left-content ul li a:hover{
+    color: rgb(227, 0, 0);
+}
+/*right-content*/
+.right-content{
+    width: 70vw;
+    padding-left: 40px;
+}
+
+.dropdown-flex{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+.dropdown{
+    width: 17em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    margin-right: 2em;
+}
+
+.select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 2px;
+    padding: 1em;
+    cursor: pointer;
+    width: 17em;
+}
+
+
+.select:hover{
+    background: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: rgb(227, 0, 0);
+}
+
+.caret{
+    width: 0;
+    height: 0;
+    border-left:  5px solid transparent;
+    border-right:  5px solid transparent;
+    border-top:  6px solid black;
+    transition: 0.3s;
+}
+
+.caret-rotate{
+    transform: rotate(180deg);
+}
+
+.menu-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 120px;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+    opacity: 0;
+}
+
+.menu-select li{
+    cursor: pointer;
+    height: 40px;
+}
+
+.menu-select li:hover{
+    background: #efefef;
+}
+.menu-select li:hover:last-child{
+    border-bottom: 1px black solid;
+}
+
+.active{
+    background: #efefef;
+}
+
+.menu-select-open{
+    display: block;
+    opacity: 1;
+}
+

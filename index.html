@@ -9,7 +9,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <div class="header">
+    <nav>
         <span class="title"><a href="index.html"><i>Media Market</i></a></span>
         <div class="search-container">
             <input class="search-input" placeholder="Czego szukasz?" >
@@ -21,10 +21,18 @@
             <ion-icon class="options-icon" name="cart"></ion-icon><span>Koszyk</span>
         </div>   
 
-    </div>
+    </nav>
     <div class="menu">
         <ul class="ul">
-            <a href=""><li><span class="products"><ion-icon class="icon" name="menu"></ion-icon>Produkty</span></li></a>
+            <li>
+                <span class="products"><ion-icon class="icon" name="menu"></ion-icon>Produkty</span>
+                <ul>
+                    <li>ww</li>
+                    <li>sss</li>
+                    <li>ddd</li>
+                </ul>
+            </li>
+            
             <li><a href="">Promocje</a></li>
             <li><a href="">Outlet</a></li>
             <li><a href="">Aktualności</a></li>
@@ -35,5 +43,60 @@
 
         </ul>
     </div>
+    <section>
+        <div class="section-container">
+        <div class="before-content">
+            <p><a href="index.html">Strona główna</a> - Wielka wyprzedaż. Tysiące produktów taniej!</p>
+        </div>
+        <div class="title-content">Wielka wyprzedaż. Tysiące produktów taniej! (3560)</div>
+        <div class="content">
+        <div class="left-content">
+            <ul>
+                <li><a href="">Telefony i smartwatche (356)</a></li>
+                <li><a href="">RTV i telewizory</a></li>
+                <li><a href="">Komputery i tablety</a></li>
+                <li><a href="">Gaming</a></li>
+                <li><a href="">AGD</a></li>
+                <li><a href="">AGD do zabudowy</a></li>
+                <li><a href="">AGD małe</a></li>
+                <li><a href="">Foto i kamery</a></li>
+                <li><a href="">Pojazdy elektryczne</a></li>
+                <li><a href="">Sport i rekreacja</a></li>
+                <li><a href="">Strefa rodzica</a></li>
+            </ul>
+        </div>
+        <div class="right-content">
+            <div class="dropdown-flex">
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">Popularność</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu-select">
+                        <li class="active">Popularność</li>
+                        <li>Cena - rosnąco</li>
+                        <li>Cena - malejąco</li>
+                    </ul>
+                </div>
+
+
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">Popularność</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu-select">
+                        <li class="active">Popularność</li>
+                        <li>Cena - rosnąco</li>
+                        <li>Cena - malejąco</li>
+                    </ul>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
 </body>
+<script src="js/dropdown-select.js"></script>
 </html>
