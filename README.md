@@ -1,4 +1,17 @@
 # MediaMarket-webstore
-Electronic store
+<h3>Electronic store</h3>
+<h3>Technologies:</h3>
+<ul>
+  <li>HTML,</li>
+  <li>CSS,</li>
+  <li>JavaScript.</li>
+</ul>
+<h3>Basic functionalities</h3>
+<ul>
+  <li>search bar,</li>
+  <li>filtr devices,</li>
+  <li>price range slider,</li>
+  <li>add to cart.</li>
+</ul>
 
-inspired by: https://mediamarkt.pl/lp-wielka-wyprzedaz-tysiace-produktow-taniej?gclid=Cj0KCQjw_5unBhCMARIsACZyzS2_4w8Zm6jKAqPwTZheR_7ojPu_mNDe1jFzpf_KyVFKePXjRYb7lyQaAnpFEALw_wcB#
+<h3>Inspired by:</h3> https://mediamarkt.pl/lp-wielka-wyprzedaz-tysiace-produktow-taniej
