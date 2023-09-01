@@ -672,11 +672,207 @@ input[type="range"]::-moz-range-thumb{
     padding-top: 5%;
 }
 
+.element2{
+    padding-top: 10px;
+}
+
 .element2 p{
     font-family: 'Saira', sans-serif;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.price-sale, .price-basic{
+    text-align: center;
+    width: 80px;
+}
+
+.element2 .days30{
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 150px;
+    font-weight: 100;
+    color: #949494;
+}
+
+.element2-btn{
+    height: 67%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.element2-btn button{
+    width: 80%;
+    height: 50px;
+    color: white;
+    background-color: rgb(227, 0, 0);
+    border: none;
+    font-weight: bold;
+    font-family: 'Saira', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.element2-btn button:hover{
+    transition: .3s ease-in-out;
+    background-color: black;
+}
+
+.element2 .price-sale{
+    display: none;
+}
+
+.element2.on-sale .price-basic{
+    color: black;
+    position: relative;
+}
+
+.element2.on-sale .price-basic::before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    top: 50%;
+    left: 25%;
+    background-color: black;
+}
+
+.element2.on-sale .price-sale{
+    display: block;
     font-size: 40px;
+}
+
+/*footer*/
+footer{
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+footer button:hover{
+    transition: .3s ease-in-out all;
+    background-color: rgb(227, 0, 0);
+    cursor: pointer;
+}
+
+.socials{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* background: red; */
+}
+
+.social1{
+    display: flex;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    
+}
+
+.social1 button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 14px;
     font-weight: bold;
 }
+
+.social1 img{
+    width: 120px;
+}
+
+.imgmap{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social1-part2{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social1-part2 span{
+    margin-bottom: 10px;
+}
+
+.social2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.social2 span{
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+}
+
+.social2 button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+.social3{
+    /* background-color: chocolate; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social3 .join{
+    width: 100%;
+    /* background-color: aqua; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.social3 .icons-socials{
+    width: 100%;
+    /* background-color: antiquewhite; */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+}
+
+.social3 .ikon{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.social3 span:hover{
+    cursor: pointer;
+    transition: .3s ease-in-out all;
+    color: rgb(227, 0, 0);
+}
+
 
 
 
