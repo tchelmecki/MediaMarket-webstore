@@ -17,7 +17,7 @@ const products = [
     },
     {
       id: 1,
-      name: "Lodówka WHIRLOOp ZKO14O",
+      name: "Lodówka WHIRLOOP ZKO14O",
       description: `Wymiary: (szer. x wys. x gł.): 91.2 x 178 x 71.6 cm
       Pojemność netto chłodziarki/zamrażarki: 389l / 225l
       Kolor: Grafitowa stal

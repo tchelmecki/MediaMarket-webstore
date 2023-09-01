@@ -206,6 +206,9 @@ section{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.arrow{
+    display: none;
+}
 .section-container{
     width: 70%;
 }
@@ -237,6 +240,9 @@ section{
     border: 1px solid #ddd;
     width: 15vw;
     height: 440px;
+}
+.left-bar p{
+    display: none;
 }
 .left-bar ul{
     display: flex;
@@ -452,6 +458,9 @@ input[type="range"]::-moz-range-thumb{
     cursor: pointer;
 
 }
+.btns button:nth-child(2){
+    display: none;
+}
 .btns button:last-child{
     width: 63%;
     height: 40px;
@@ -592,17 +601,18 @@ input[type="range"]::-moz-range-thumb{
     margin-top: 20px;
     width: 100%;
     display: flex;
+    height: 500px;
 }
 
 .element1{
     width: 70%;
-    height: 500px;
+    height: 100%;
     border: 1px solid #ddd;
 }
 
 .element2{
     width: 30%;
-    height: 500px;
+    height: 100%;
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -651,7 +661,6 @@ input[type="range"]::-moz-range-thumb{
 
 .element1 img{
     width: 180px;
-    
 }
 .device{
     width: 100%;
@@ -871,6 +880,221 @@ footer button:hover{
     cursor: pointer;
     transition: .3s ease-in-out all;
     color: rgb(227, 0, 0);
+}
+
+
+
+/*MEDIA QUERY*/
+/*1800px*/
+@media only screen and (width< 1800px) {
+    .title{
+        font-size: 34px;
+    }
+    .options{
+        font-size: 14px;
+    }
+}
+
+
+/*1500px*/
+@media only screen and (width< 1500px) {
+    .title{
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+    }
+    .options{
+        font-size: 12px;
+    }
+    .menu{
+        font-size: 12px;
+    }
+    .search-input{
+        height: 40px;
+        
+    }
+    .main-content{
+        height: 400px;
+    }
+    .element1 img{
+        width: 150px;
+        height: 200px;
+    }
+    .device-info{
+        font-size: 12px;
+    }
+    .element2-btn{
+        height: 60%;
+    }
+}
+
+/*1400px*/
+@media only screen and (width< 1500px){
+    .element1 .title-element1{
+        font-size: 17px;
+    }
+    .big-info-title{
+        font-size: 13px;
+    }
+    footer{
+        height: 150px;
+        font-size: 13px;
+    }
+    .socials button{
+        width: 160px;
+        height: 50px;
+        font-size: 12px;
+    }
+    .social3 .join{
+        font-size: 13px;
+    }
+}
+
+/*415px*/
+@media only screen and (width < 415px){
+    nav{
+        /* background-color: #949494; */
+        padding: 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+    .title{
+        font-size: 20px;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+    .search-container{
+        display: none;
+    }
+    .options{
+        width: 60%;
+    }
+    .options span{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .before-content span{
+        display: none;
+    }
+    .before-content{
+        width: 100%;
+        margin-left: 20px;
+        display: flex;
+    }
+    .arrow{
+        display: block;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .title-content{
+        display: none;
+    }
+    .dropdown-flex{
+        display: none;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .left-content, .right-content{
+        width: 100%;
+        padding: 0;
+    }
+    .left-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .left-bar{
+        width: 100%;
+        height: 350px;
+        padding: 0;
+        border: none;
+    }
+    .left-bar p{
+        display: block;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+    }
+    .btns
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .btns button:first-child{
+        display: none;
+    }
+    .btns button:nth-child(2){
+        display: block;
+        width: 90%;
+        color: white;
+        height: 50px;
+        background-color: black;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .btns button:last-child{
+        display: none;
+    }
+    .price{
+        display: none;
+    }
+    .customer-stars{
+        display: none;
+    }
+    .right-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;    
+    }
+    .element1{
+        width: 100%;
+        height: 500px;
+    }
+    .element1 img{
+        width: 100px;
+        height: 140px;
+    }
+    .device{
+        width: 100%;
+        display: flex;
+    }
+    .device-info{
+        font-size: 10px;
+    }
+    .element2{
+        width: 100%;
+        height: 300px;        
+    }
+    .element2-btn{
+        height: 30%;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 600px;
+    }
+    .section-container{
+        width: 100%;
+    }
+    .left-bar ul li a{
+        height: 30px;
+        font-size: 14px;
+    }
+    footer{
+        display: none;
+    }
 }
 
 
