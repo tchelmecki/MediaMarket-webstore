@@ -13,5 +13,5 @@
   <li>price range slider,</li>
   <li>add to cart.</li>
 </ul>
-
+<p>Work in progress...</p>
 <h3>Inspired by:</h3> https://mediamarkt.pl/lp-wielka-wyprzedaz-tysiace-produktow-taniej
