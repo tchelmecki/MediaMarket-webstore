@@ -11,7 +11,7 @@ const products = [
       Koszt zużycia prądu na 100 cykli: <b>55 kWh = 42.35 PLN</b> <br>`,
       category: "142448",
       price: 1979,
-      image: "/img/sansung1.png",
+      image: "./img/sansung1.png",
       sale: true,
       saleAmount: 200,
     },
