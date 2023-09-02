@@ -22,7 +22,7 @@ const products = [
       `,
       category: "142542",
       price: 6319,
-      image: "/img/fridge.png",
+      image: "img/fridge.png",
       sale: true,
       saleAmount: 200,
     },
