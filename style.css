@@ -3,22 +3,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
 body{
     background-color: #fff;
     color: black;
 }
-
 nav{
     height: 80px;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 15%;
-    padding-right: 15%;
     padding-top: 10px;
     flex-wrap: wrap;
     position: sticky; /* Change to sticky */
@@ -36,7 +31,7 @@ nav{
     color: rgb(227, 0, 0);
     width: 15vw;
     height: 60px;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: bold;
 }
 
@@ -189,7 +184,7 @@ ul .products:hover{
 
 /*section*/
 section{
-    width: 100vw;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -349,6 +344,7 @@ input[type="range"]::-moz-range-thumb{
     height: 17px;
     width: 17px;
     border-radius: 50%;
+    border: none;
     pointer-events: auto;
     -moz-appearance: none;
     background: rgb(227, 0, 0);
@@ -751,6 +747,7 @@ input[type="range"]::-moz-range-thumb{
 .element2.on-sale .price-sale{
     display: block;
     font-size: 40px;
+    height: 58px;
 }
 
 /*footer*/
@@ -954,21 +951,19 @@ footer button:hover{
 @media only screen and (width < 415px){
     nav{
         /* background-color: #949494; */
-        padding: 0;
+        padding: 0 20px 0 20px;
         width: 100%;
         border-bottom: 1px solid #ddd;
     }
     .title{
         font-size: 20px;
-        width: 40%;
-        display: flex;
-        justify-content: center;
+        width: 50%;
     }
     .search-container{
         display: none;
     }
     .options{
-        width: 60%;
+        width: 50%;
     }
     .options span{
         display: none;
@@ -981,7 +976,7 @@ footer button:hover{
     }
     .before-content{
         width: 100%;
-        margin-left: 20px;
+        padding-left: 20px;
         display: flex;
     }
     .arrow{
@@ -998,6 +993,9 @@ footer button:hover{
     .content{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
     .left-content, .right-content{
         width: 100%;
@@ -1014,6 +1012,7 @@ footer button:hover{
         height: 350px;
         padding: 0;
         border: none;
+        background-color: white;
     }
     .left-bar p{
         display: block;
@@ -1054,28 +1053,48 @@ footer button:hover{
         justify-content: center;
         align-items: center;
         flex-direction: column;    
+        background-color: #f8f8f8;
     }
     .element1{
         width: 100%;
         height: 500px;
+        background-color: white;
+        border-bottom: none;
+        
     }
     .element1 img{
-        width: 100px;
-        height: 140px;
+        width: 100%;
+        height: 100%;
     }
     .device{
         width: 100%;
         display: flex;
     }
-    .device-info{
-        font-size: 10px;
-    }
     .element2{
         width: 100%;
-        height: 300px;        
+        height: 300px;    
+        position: relative;    
+        background-color: white;
+        background-image: linear-gradient(to top, rgba(99, 99, 99, 0.2) 0%, transparent 100%);
+        background-position: bottom;
+        background-size: 100% 4px; /* Grubość cienia na dole */
+        background-repeat: no-repeat;
+        border-top: none;
+    }
+    .device-info{
+        font-size: 10px;
+        padding: 0;
+    }
+    .days30{
+        right: 20px;
+        top: 30px;
+        position: absolute;
     }
     .element2-btn{
         height: 30%;
+    }
+    .element2-btn button{
+        width: 90%;
     }
     .main-content{
         display: flex;
