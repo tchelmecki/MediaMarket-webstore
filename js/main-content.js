@@ -55,7 +55,7 @@ const renderProducts = (items) => {
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <span>(3 opinie)</span> <span>nr kat. 1424448</span>
+                            <span>(3 opinie)</span> <span>nr kat. ${items[i].category}</span>
                         </div>
                         <div class="big-info">
                             <div class="big-info-title">Wielka wyprzedaż. Tysiące produktów TANIEJ</div>
