@@ -1,47 +1,9 @@
-{/* <div class="main-content">
-                <div class="element1">
-                    <div class="title-element1">
-                        <span>Pralka SANSUNG WW80TA02341FAE/EA Ecobubble</span> <span>SANSUNG</span> 
-                        <div class="stars-element1">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <span>(3 opinie)</span> <span>nr kat. 1424448</span>
-                        </div>
-                        <div class="big-info">
-                            <div class="big-info-title">Wielka wyprzedaż. Tysiące produktów TANIEJ</div>
-                        </div>
-                        <div class="device">
-                            <div class="device-img">
-                                <img src="img/sansung1.webp" alt="">
-                            </div>
-                            <div class="device-info">
-                                Wymiary: <b>(szer. x wys. x gł.): 60 x 85 x 55 cm</b><br>
-                                Wsad [kg]: <b>8</b> <br>
-                                Kolor: <b>Biały, Czarne drzwi</b> <br>
-                                Maksymalna prędkość wirowania [obr/min]: <b>1200</b> <br>
-                                Wyświetlacz elektroniczny: <b>TAK</b> <br>
-                                Zabezpieczenia: <b>Blokada rodzicielska</b> <br>
-                                Koszt zużycia prądu na 100 cykli: <b>55 kWh = 42.35 PLN</b> <br>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                   
-                </div>
-                <div class="element2">
-                    <p>1979,-</p>
-                </div>
-</div> */}
-
-const currentProducts = products;
-
+let currentProducts = products;
+let categories = new Set();
 const productsSection = document.querySelector(".right-content");
 
 const renderProducts = (items) => {
+    productsSection.innerHTML = "";
     for(let i = 0; i < items.length; i++){
         const newProduct = document.createElement('div');
         newProduct.className = 'main-content';
@@ -55,7 +17,7 @@ const renderProducts = (items) => {
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <span>(3 opinie)</span> <span>nr kat. ${items[i].category}</span>
+                            <span>(3 opinie)</span> <span>nr kat. ${items[i].nrcategory}</span>
                         </div>
                         <div class="big-info">
                             <div class="big-info-title">Wielka wyprzedaż. Tysiące produktów TANIEJ</div>
@@ -87,4 +49,75 @@ const renderProducts = (items) => {
     }
 };
 
+const renderCategories = (items) => {
+    for(let i = 0; i < items.length; i++){
+        categories.add(items[i].category)
+    }
+    const categoriesItems = document.querySelector(".left-bar ul");
+
+    categories = ['wszystkie',...categories];
+
+    categories.forEach((category, index) => {
+        const newCategoryli = document.createElement("li");
+        const newCategory = document.createElement("button");
+        newCategory.innerHTML = category;
+        newCategory.dataset.category = category;
+
+        index === 0 ? newCategory.classList.add("active") : "";
+
+        categoriesItems.appendChild(newCategoryli);
+        newCategoryli.appendChild(newCategory);
+
+    })
+
+    console.log(categories);
+
+}
+
+document.onload = renderCategories(currentProducts);
 document.onload = renderProducts(currentProducts);
+
+
+const categoriesButtons = document.querySelectorAll(".left-bar ul li button");
+
+categoriesButtons.forEach((btn) =>{
+    btn.addEventListener("click", (e) => {
+        const category = e.target.dataset.category;
+
+        categoriesButtons.forEach((btn) => btn.classList.remove("active"));
+        e.target.classList.add("active");
+
+
+        currentProducts = products;
+
+        if(category === 'wszystkie'){
+            currentProducts = products;
+        }
+        else{
+            currentProducts = currentProducts.filter((
+                (product) => product.category === category
+            ));
+        }
+    
+        renderProducts(currentProducts);
+    })
+});
+
+const searchInput = document.querySelector(".search-input");
+
+searchInput.addEventListener("input", (e)=>{
+    const search = e.target.value;
+
+    const foundProduct = currentProducts.filter((product) => {
+        if(product.name.toLowerCase().includes(search.toLowerCase()))
+        {
+            return product;
+        }
+    });
+
+    const emptyState = document.querySelector(".empty-state");
+
+    foundProduct.length === 0 ? emptyState.classList.add("active") : emptyState.classList.remove("active");
+
+    renderProducts(foundProduct);
+});
