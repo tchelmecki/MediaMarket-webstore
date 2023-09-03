@@ -29,7 +29,7 @@ nav{
 .title{
     font-family: 'Saira', sans-serif;
     color: rgb(227, 0, 0);
-    width: 15vw;
+    width: 25vw;
     height: 60px;
     font-size: 38px;
     font-weight: bold;
@@ -94,8 +94,8 @@ nav{
 .menu{
     height: 70px;
     border-bottom: 1px solid rgba(210, 210, 210, 0.406);
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
     position: fixed;
     top: 0;
     position: relative;
