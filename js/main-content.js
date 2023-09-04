@@ -1,6 +1,8 @@
 let currentProducts = products;
 let categories = new Set();
-const productsSection = document.querySelector(".right-content");
+let cart = [];
+const productsSection = document.querySelector(".right-content-product");
+
 
 const renderProducts = (items) => {
     productsSection.innerHTML = "";
@@ -40,7 +42,7 @@ const renderProducts = (items) => {
                     <p class="price-basic">${items[i].price}zł</p>
                     <p class="days30">Najniższa cena z 30 dni przed obniżką: ${items[i].price},-</p>
                     <div class="element2-btn">
-                    <button>DO KOSZYKA</button>
+                    <button class="cart">DO KOSZYKA</button>
                     </div>
         </div>
         `
@@ -55,7 +57,7 @@ const renderCategories = (items) => {
     }
     const categoriesItems = document.querySelector(".left-bar ul");
 
-    categories = ['wszystkie',...categories];
+    categories = ['Wszystko',...categories];
 
     categories.forEach((category, index) => {
         const newCategoryli = document.createElement("li");
@@ -90,7 +92,7 @@ categoriesButtons.forEach((btn) =>{
 
         currentProducts = products;
 
-        if(category === 'wszystkie'){
+        if(category === 'Wszystko'){
             currentProducts = products;
         }
         else{
@@ -121,3 +123,8 @@ searchInput.addEventListener("input", (e)=>{
 
     renderProducts(foundProduct);
 });
+
+
+//cdn... const addToCartBtns = document.querySelectorAll(".cart");
+
+

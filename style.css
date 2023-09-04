@@ -523,6 +523,10 @@ input[type="range"]::-moz-range-thumb{
     height: 280px; /* lub inne style */
 }
 
+.right-content-product{
+    margin-top: 20px;
+}
+
 .select{
     display: flex;
     justify-content: space-between;
@@ -620,8 +624,6 @@ input[type="range"]::-moz-range-thumb{
     margin-top: 20px;
     display: none;
     background: none;
-    padding-left: 20px;
-    margin-top: 0;
     width: 500px;
 }
 
