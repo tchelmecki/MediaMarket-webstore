@@ -91,6 +91,31 @@ nav{
     color: rgb(227, 0, 0);
     cursor: pointer;
 }
+
+.options:last-child{
+    position: relative;
+}
+
+.cart-clear-btn{
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-weight: bold;
+    font-size: 15px;
+    display: none;
+}
+
+.cart-clear-btn.active{
+    display: block;
+    background: transparent;
+}
+
+.cart-clear-btn:hover{
+    color: #949494;
+    cursor: pointer;
+}
+
 .menu{
     height: 70px;
     border-bottom: 1px solid rgba(210, 210, 210, 0.406);

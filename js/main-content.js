@@ -42,7 +42,7 @@ const renderProducts = (items) => {
                     <p class="price-basic">${items[i].price}zł</p>
                     <p class="days30">Najniższa cena z 30 dni przed obniżką: ${items[i].price},-</p>
                     <div class="element2-btn">
-                    <button class="cart">DO KOSZYKA</button>
+                    <button data-id="${items[i].id}" class="cart">DO KOSZYKA</button>
                     </div>
         </div>
         `
@@ -125,6 +125,37 @@ searchInput.addEventListener("input", (e)=>{
 });
 
 
-//cdn... const addToCartBtns = document.querySelectorAll(".cart");
+const cartAmount = document.querySelector(".price-amount");
+const addToCartBtns = document.querySelectorAll(".cart");
+const cartClearBtn = document.querySelector(".cart-clear-btn");
+
+const addToCart = (e) => {
+    const selectedId = parseInt(e.target.dataset.id);
+
+    const key = currentProducts.findIndex((product) => product.id === selectedId);
+
+    cart.push(currentProducts.at(key));
+
+    const cartTotal = cart.reduce((sum, product) => {
+        return (sum += product.price);
+    }, 0);
+
+   
+
+    cartTotal > 0 ? cartClearBtn.classList.add("active") : cartClearBtn.classList.remove("active");
+    
+    cartAmount.innerHTML = `${cartTotal} zł`;
+
+    console.log(cartTotal);
+};
+
+const clearCart = () => {
+    cartAmount.innerHTML = "Koszyk";
+    cart = [];
+}
+
+cartClearBtn.addEventListener("click", clearCart)
+
+addToCartBtns.forEach((btn) => btn.addEventListener("click", addToCart));
 
 
