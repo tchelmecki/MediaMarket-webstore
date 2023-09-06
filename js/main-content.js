@@ -140,7 +140,6 @@ const addToCart = (e) => {
         return (sum += product.price);
     }, 0);
 
-   
 
     cartTotal > 0 ? cartClearBtn.classList.add("active") : cartClearBtn.classList.remove("active");
     
