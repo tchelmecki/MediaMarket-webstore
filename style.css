@@ -104,15 +104,11 @@ nav{
     font-weight: bold;
     font-size: 15px;
     display: none;
-}
-
-.cart-clear-btn.active{
-    display: block;
     background: transparent;
+
 }
 
 .cart-clear-btn:hover{
-    color: #949494;
     cursor: pointer;
 }
 

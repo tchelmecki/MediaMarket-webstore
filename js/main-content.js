@@ -1,7 +1,42 @@
 let currentProducts = products;
 let categories = new Set();
 let cart = [];
+let addToCartButtons;
 const productsSection = document.querySelector(".right-content-product");
+
+
+
+const cartAmount = document.querySelector(".price-amount");
+const addToCartBtns = document.querySelectorAll(".cart");
+const cartClearBtn = document.querySelector(".cart-clear-btn");
+
+const addToCart = (e) => {
+    const selectedId = parseInt(e.target.dataset.id);
+
+    const key = currentProducts.findIndex((product) => product.id === selectedId);
+
+    cart.push(currentProducts.at(key));
+
+    const cartTotal = cart.reduce((sum, product) => {
+        return (sum += product.price);
+    }, 0);
+
+    cartClearBtn.style.display = "block";
+
+    cartAmount.innerHTML = `${cartTotal} zł`;
+};
+
+const clearCart = () => {
+    cartAmount.innerHTML = "Koszyk";
+    cart = [];
+
+    // Upewnij się, że koszyk jest pusty, zanim dodasz klasę `.active`
+    if (cart.length === 0) {
+        cartClearBtn.style.display = "none";
+    }
+}
+
+cartClearBtn.addEventListener("click", clearCart);
 
 
 const renderProducts = (items) => {
@@ -49,6 +84,8 @@ const renderProducts = (items) => {
 
         productsSection.appendChild(newProduct);
     }
+    addToCartButtons = document.querySelectorAll(".cart");
+    addToCartButtons.forEach((btn) => btn.addEventListener("click", addToCart));
 };
 
 const renderCategories = (items) => {
@@ -125,36 +162,8 @@ searchInput.addEventListener("input", (e)=>{
 });
 
 
-const cartAmount = document.querySelector(".price-amount");
-const addToCartBtns = document.querySelectorAll(".cart");
-const cartClearBtn = document.querySelector(".cart-clear-btn");
-
-const addToCart = (e) => {
-    const selectedId = parseInt(e.target.dataset.id);
-
-    const key = currentProducts.findIndex((product) => product.id === selectedId);
-
-    cart.push(currentProducts.at(key));
-
-    const cartTotal = cart.reduce((sum, product) => {
-        return (sum += product.price);
-    }, 0);
 
 
-    cartTotal > 0 ? cartClearBtn.classList.add("active") : cartClearBtn.classList.remove("active");
-    
-    cartAmount.innerHTML = `${cartTotal} zł`;
-
-    console.log(cartTotal);
-};
-
-const clearCart = () => {
-    cartAmount.innerHTML = "Koszyk";
-    cart = [];
-}
-
-cartClearBtn.addEventListener("click", clearCart)
-
-addToCartBtns.forEach((btn) => btn.addEventListener("click", addToCart));
+// addToCartBtns.forEach((btn) => btn.addEventListener("click", addToCart));
 
 
