@@ -29,7 +29,7 @@ nav{
 .title{
     font-family: 'Saira', sans-serif;
     color: rgb(227, 0, 0);
-    width: 25vw;
+    width: 17vw;
     height: 60px;
     font-size: 38px;
     font-weight: bold;
@@ -46,7 +46,7 @@ nav{
 
 .search-input{
     height: 50px;
-    width: 35vw;
+    width: 43vw;
     border: 1px solid black;
     border-radius: 2px;
     padding-left: 20px;
@@ -152,17 +152,21 @@ ul .products:first-child{
 ul li:not(:first-child){
     position: relative;
 }
+.menu ul li:first-child ul li::after {
+    content: none;
+}
 
 .menu ul li:not(:first-child)::after {
     content: '';
     position: absolute;
     bottom: 0px;
-    width: 0; /* Szerokość początkowa linii - zerowa */
+    width: 0;
     height: 2px;
-    background-color:  rgb(227, 0, 0);
-    transition: width 0.3s ease, transform 0.3s ease; /* Dodajemy transformację do animacji */
-    transform: translateX(-50%); /* Przesunięcie w lewo o połowę szerokości elementu */
+    background-color: rgb(227, 0, 0);
+    transition: width 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%);
 }
+
   
 .menu ul li:not(:first-child):hover::after {
     width: 100%; /* Po najechaniu myszką, szerokość linii zmienia się na pełną długość */
@@ -190,7 +194,7 @@ ul .products:hover{
     display: flex;
     justify-content: center;
     padding: 10px 30px 10px 30px;
-    border: 3px solid red;
+    border: 2px solid rgb(227, 0, 0);
     color: red;
     font-family: 'Saira', sans-serif;
     font-weight: bold;
@@ -200,9 +204,53 @@ ul .products:hover{
 
 
 /*DROPDOWN MENU*/
-.menu ul ul{
-    
+.menu ul li:first-child {
+    position: relative;
 }
+
+.menu ul li:first-child ul {
+    display: none;
+   
+}
+
+.menu ul li:first-child:hover ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    width: 15vw;
+    left: 0;
+    height: auto; /* Ustaw wysokość na auto, aby dostosować do zawartości */
+    opacity: 0; /* Ukryj menu */
+    background-color: #fff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: opacity 0.3s ease-in-out; /* Dodaj transition do opacity */
+    opacity: 1; /* Pokaż menu podczas hover */
+}
+
+.menu ul li:first-child ul li{
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+.menu ul li:first-child ul li:hover{
+    cursor: pointer;
+    background-color: #ebebeb;
+    border: none;
+}
+
+.ikon-product{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+}
+
 
 /*section*/
 section{
