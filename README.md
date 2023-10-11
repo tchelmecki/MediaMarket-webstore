@@ -6,6 +6,10 @@
   <li>CSS,</li>
   <li>JavaScript.</li>
 </ul>
+
+![My Skills](https://skillicons.dev/icons?i=html,css,js)
+
+
 <h3>Basic functionalities</h3>
 <ul>
   <li>search bar,</li>
