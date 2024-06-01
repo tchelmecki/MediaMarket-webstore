@@ -23,3 +23,11 @@
 https://tchelmecki.github.io/MediaMarket-webstore/
 
 <h3>Inspired by:</h3> https://mediamarkt.pl/lp-wielka-wyprzedaz-tysiace-produktow-taniej
+
+<h3>Desktop version</h3>
+
+![1](https://github.com/tchelmecki/MediaMarket-webstore/assets/121833733/682a050e-aeb7-4d58-b2c2-10b625976a1c)
+
+<h3>Mobile version for screen smaller than 415px</h3>
+
+![2](https://github.com/tchelmecki/MediaMarket-webstore/assets/121833733/fb784e25-2314-48f0-8c1c-1d8d33825bbf)
